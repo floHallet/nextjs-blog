@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { useEffect } from 'react';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,17 +16,23 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  
+  useEffect(() => {
+    fetch('/api/hello')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(`You are visitor #${data}`)
+      })
+  }, [])
+
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>My name is Florent and I'm a junior web developer.</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>My name is Florent and I'm a web developer.</p>
+        <p>I needed a blog to keep track of things I read on the internet and speak about things i like. So here it is 🔥.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
