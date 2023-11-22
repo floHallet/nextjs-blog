@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Welcome !';
+const name = 'Welcome folks!';
 export const siteTitle = 'Blog | Florent Hallet';
 
 export default function Layout({ children, home }) {
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="A blog about web developement"
+          content="A blog about the role of the product owner"
         />
         <meta
           property="og:image"
@@ -50,9 +50,9 @@ export default function Layout({ children, home }) {
                 alt=""
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={utilStyles.headingMd}>
               <Link href="/" className={utilStyles.colorInherit}>
-                {name}
+              ← Back to home
               </Link>
             </h2>
           </>
