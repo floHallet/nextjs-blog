@@ -18,10 +18,11 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   
   useEffect(() => {
+    //increment the visitor counter
     fetch('/api/hello')
       .then((res) => res.json())
       .then((data) => {
-        console.log(`You are visitor #${data}`)
+        console.log(`Hi ! You are visitor #${data}.`)
       })
   }, [])
 
@@ -31,8 +32,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>My name is Florent and I'm a web developer.</p>
-        <p>I needed a blog to keep track of things I read on the internet and speak about things i like. So here it is 🔥.</p>
+        <p>My name is Florent and I'm a product owner.</p>
+        <p>I needed a blog to share information about my job.<br></br>So here it is 🔥.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
