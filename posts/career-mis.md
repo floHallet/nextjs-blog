@@ -7,13 +7,13 @@ date: '2023-12-01'
 
 In the journey of a career, be it promising or lackluster, avoiding certain mistakes is crucial.  Let's share ten career mistakes to sidestep. These include neglecting to set realistic goals, overlooking personal potential, underestimating the power of networking, inefficiently managing time, neglecting continuous upskilling, hesitating to ask for what you want, prioritizing money over other job factors, disregarding work-life balance, missing out on learning opportunities, and failing to see the bigger picture in projects.
 
-## 1. Setting Realistic Goals
+## 1. Not Setting Realistic Goals
 Career success starts with having clear, achievable goals. Long-term objectives are as important as short-term ones.
 
-## 2. Recognizing Your Potential
+## 2. Not Recognizing Your Potential
 Identify and leverage your strengths to shape your career path. Have a goal and work towards it to understand your potential.
 
-## 3. Taking the Time to Network
+## 3. Not sTaking the Time to Network
 Socializing and networking with like-minded individuals in the tech space is crucial for career growth. Platforms like LinkedIn and tech Twitter are valuable resources.
 
 ## 4. Not Wasting Precious Time
