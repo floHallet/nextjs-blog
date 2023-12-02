@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="A blog about the role of the product owner"
+          content="A blog about agility and the role of the product owner"
         />
         <meta
           property="og:image"
@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
               className={utilStyles.borderCircle}
               height={144}
               width={144}
-              alt="A scientist in front of a computer"
+              alt="A scientist reading a paper in front of a old computer"
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -47,12 +47,12 @@ export default function Layout({ children, home }) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt="A scientist in front of a computer"
+                alt="A scientist reading a paper in front of a old computer"
               />
             </Link>
             <h2 className={utilStyles.headingMd}>
               <Link href="/" className={utilStyles.colorInherit}>
-              ← Back to home
+              ← Back to all posts
               </Link>
             </h2>
           </>
