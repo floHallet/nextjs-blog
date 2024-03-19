@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 export default function ThemeSwitch() {
-
-    //const [theme, setTheme] = useState('')
 
     const onClick = () => {
         // flip current value
@@ -20,10 +18,6 @@ export default function ThemeSwitch() {
         document
             .querySelector('#theme-toggle')
             ?.setAttribute('aria-label', theme)
-
-        /*if (preferedTheme) {
-            setTheme(preferedTheme)
-        }*/
     }
 
 
@@ -31,7 +25,6 @@ export default function ThemeSwitch() {
 
         //console.log("useEffect...départ")
         if (!document.firstElementChild.hasAttribute('data-theme')) {
-            //setTheme(document.firstElementChild.getAttribute('data-theme'))
        
             const getThemePreference = window.matchMedia('(prefers-color-scheme: dark)').matches
                 ? 'dark'
@@ -52,7 +45,6 @@ export default function ThemeSwitch() {
     }, [])
 
     return (
-        <>
             <button onClick={onClick} className="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
                 <svg className="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                     <mask className="moon" id="moon-mask">
@@ -72,6 +64,5 @@ export default function ThemeSwitch() {
                     </g>
                 </svg>
             </button>
-        </>
     )
 }
