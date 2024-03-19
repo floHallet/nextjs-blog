@@ -29,7 +29,7 @@
 }
 
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
-  transform-origin: center;
+  transform-origin: center center;
 }
 
 .sun-and-moon > :is(.moon, .sun) {
