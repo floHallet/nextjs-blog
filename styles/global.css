@@ -1,5 +1,36 @@
+:root {
+  color-scheme: dark light;
+
+  /* destructure brand channels */
+  --hue: 200;
+  /* change me!! */
+  --saturation: 100%;
+  --lightness: 50%;
+
+  /* build colors with props */
+  --brand: hsl(var(--hue) var(--saturation) var(--lightness));
+
+  /* very dark brand blue */
+  --text: hsl(var(--hue) var(--saturation) 10%
+      /* lower is darker */
+    );
+
+  /* very bright brand white */
+  --surface: hsl(var(--hue) calc(var(--saturation) / 2) 95%
+      /* higher is lighter */
+    );
+
+  --link: hsl(212, 100%, 48%);
+
+  /* theme-swith colors*/
+  --icon-fill: hsl(210, 10%, 30%);
+  --icon-fill-hover: hsl(210, 10%, 15%);
+}
+
 html,
 body {
+  color: var(--text);
+  background: var(--surface);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
@@ -13,7 +44,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -24,4 +55,42 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  /* just tweak the lightness */
+  /* maybe desaturate too */
+
+  :root {
+    --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+    --link: hsl(var(--hue) var(--saturation) 75%);
+    --surface: hsl(var(--hue) var(--saturation) 5%);
+
+    /* theme-swith colors*/
+    --icon-fill: hsl(210, 10%, 70%);
+    --icon-fill-hover: hsl(210, 15%, 90%);
+  }
+}
+
+html[data-theme=dark] {
+
+  --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+  --surface: hsl(var(--hue) var(--saturation) 5%);
+  --link: hsl(var(--hue) var(--saturation) 75%);
+
+  /* theme-swith colors*/
+  --icon-fill: hsl(210, 10%, 70%);
+  --icon-fill-hover: hsl(210, 15%, 90%);
+}
+
+html[data-theme=light] {
+
+  --text: hsl(var(--hue) var(--saturation) 10%);
+  --link: hsl(212, 100%, 48%);
+  --surface: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
+
+  /* theme-swith colors*/
+  --icon-fill: hsl(210, 10%, 30%);
+  --icon-fill-hover: hsl(210, 10%, 15%);
 }

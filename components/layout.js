@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import ThemeSwitch from './theme-switch';
 
 const name = 'Welcome folks!';
 export const siteTitle = 'Blog | Florent Hallet';
@@ -26,6 +27,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+        <nav className={styles.themeSwitcher}><ThemeSwitch /></nav>
         {home ? (
           <>
             <Image
