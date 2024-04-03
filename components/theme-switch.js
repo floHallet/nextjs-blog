@@ -22,8 +22,6 @@ export default function ThemeSwitch() {
 
 
     useEffect(() => {
-
-        //console.log("useEffect...départ")
         if (!document.firstElementChild.hasAttribute('data-theme')) {
        
             const getThemePreference = window.matchMedia('(prefers-color-scheme: dark)').matches
