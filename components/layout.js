@@ -54,7 +54,7 @@ export default function Layout({ children, home }) {
             </Link>
             <h2 className={utilStyles.headingMd}>
               <Link href="/" className={utilStyles.colorInherit}>
-              ← Back to all posts
+                ← Back to all posts
               </Link>
             </h2>
           </>
@@ -66,6 +66,7 @@ export default function Layout({ children, home }) {
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      {home && (<footer className={styles.backToHome}>Made with &#10084; by floHal.</footer>)}
     </div>
   );
 }

@@ -14,13 +14,13 @@
   --text: hsl(var(--hue) var(--saturation) 10%;
       /* lower is darker */
     );
+  --light-text: hsl(0, 0%, 40%);
 
   /* very bright brand white */
-  --surface: hsl(var(--hue) calc(var(--saturation) / 2) 99%;
+  --surface: hsl(240, 11%, 96%);
       /* higher is lighter */
-    );
 
-  --link: hsl(var(--hue) var(--saturation) 30%);
+  --link: hsl(210, 100%, 40%);
 
   /* theme-swith colors*/
   --icon-fill: hsl(var(--hue) 30% 30%);
@@ -46,6 +46,7 @@ body {
 a {
   color: var(--link);
   text-decoration: none;
+  position: relative;
 }
 
 a:hover {
@@ -57,6 +58,9 @@ img {
   display: block;
 }
 
+footer {
+  text-align: center;
+}
 
 @media (prefers-color-scheme: dark) {
   /* just tweak the lightness */
@@ -64,29 +68,40 @@ img {
 
   :root {
     --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+    --light-text: hsl(0, 0%, 55%);
     --surface: hsl(var(--hue) var(--saturation) 5%);
     --link: hsl(var(--hue) var(--saturation) 75%);
 
     /* theme-swith colors*/
     --icon-fill: hsl(var(--hue) 5% 65%);
   }
+
+  img {
+    filter: brightness(.8)
+}
 }
 
 html[data-theme=dark] {
 
   --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+  --light-text: hsl(0, 0%, 55%);
   --surface: hsl(var(--hue) var(--saturation) 5%);
   --link: hsl(var(--hue) var(--saturation) 75%);
 
   /* theme-swith colors*/
   --icon-fill: hsl(var(--hue) 5% 65%);
+
+  img {
+    filter: brightness(.8)
+  }
 }
 
 html[data-theme=light] {
 
   --text: hsl(var(--hue) var(--saturation) 10%);
-  --surface: hsl(var(--hue) calc(var(--saturation) / 2) 99%);
-  --link: hsl(var(--hue) var(--saturation) 30%);
+  --light-text: hsl(0, 0%, 40%);
+  --surface: hsl(240, 11%, 96%);
+  --link: hsl(210, 100%, 40%);
 
   /* theme-swith colors*/
   --icon-fill: hsl(var(--hue) 30% 30%);
