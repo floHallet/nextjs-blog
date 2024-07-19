@@ -27,10 +27,10 @@ export default function Post({ postData }) {
   useEffect(() => {
     //Add the visitor to the postgreSQL DB
     fetch(`/api/add-visitor?page=${postData.title}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(`${data}`)
-      });
+      //.then((res) => res.json())
+      //.then((data) => {
+      //  console.log(`${data}`)
+      //});
   }, [])
 
     return (
