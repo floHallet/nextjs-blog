@@ -16,14 +16,14 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  
+
   useEffect(() => {
-    //increment the visitor counter
-    fetch('/api/hello')
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(`Hi ! You are visitor #${data}.`)
-      })
+    //Add the visitor to the postgreSQL DB
+    fetch('/api/add-visitor?page=Home')
+      //.then((res) => res.json())
+      //.then((data) => {
+      //  console.log(`${data}`)
+      //});
   }, [])
 
   return (
@@ -40,12 +40,12 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>{title}</Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
+              <Link href={`/posts/${id}`}>{title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
           ))}
         </ul>
       </section>
