@@ -7,7 +7,7 @@ export default async function handler(request, response) {
     //if (!petName || !ownerName) throw new Error('Pet and owner names required');
     const id = Math.random()*1000;
     const page = "testing";
-    await sql`INSERT INTO visitors VALUES (${id}, ${page});`;
+    await sql`INSERT INTO (id, page) visitors VALUES (${id}, ${page});`;
   } catch (error) {
     return response.status(500).json({ error });
   }
