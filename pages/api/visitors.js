@@ -5,11 +5,13 @@ export default async function handler(request, response) {
     //const petName = request.query.petName;
     //const ownerName = request.query.ownerName;
     //if (!petName || !ownerName) throw new Error('Pet and owner names required');
-    await sql`INSERT INTO visitors VALUES (${Math.random()*1000}, 'testing');`;
+    const id = Math.random()*1000;
+    const page = "testing";
+    await sql`INSERT INTO visitors VALUES (${id}, ${page});`;
   } catch (error) {
     return response.status(500).json({ error });
   }
  
-  //const pets = await sql`SELECT * FROM Pets;`;
-  return response.status(200).json("SUCCESS !");
+  const visitors = await sql`SELECT * FROM visitors;`;
+  return response.status(200).json({ visitors });
 }
