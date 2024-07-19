@@ -10,7 +10,7 @@ export default async function handler(request, response) {
     //Get actual time
     const visit_date = new Date().toISOString();
 
-    await sql`INSERT INTO Visitors (Visit_Date, Page, Ip) VALUES (, ${visit_date}, ${page}, ${ip});`;
+    await sql`INSERT INTO Visitors (Visit_Date, Page, Ip) VALUES (${visit_date}, ${page}, ${ip});`;
   } catch (error) {
     return response.status(500).json({ error });
   }
