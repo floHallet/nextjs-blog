@@ -19,11 +19,12 @@ export default function Home({ allPostsData }) {
   
   useEffect(() => {
     //increment the visitor counter
-    fetch('/api/hello')
+    /*fetch('/api/hello')
       .then((res) => res.json())
       .then((data) => {
         console.log(`Hi ! You are visitor #${data}.`)
-      })
+      })*/
+     
   }, [])
 
   return (
