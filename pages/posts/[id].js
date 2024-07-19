@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
+import { useEffect } from 'react';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
