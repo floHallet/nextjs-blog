@@ -1,6 +1,6 @@
 ---
 title: 'The Daily Scrum is NOT a Status Meeting'
-date: '2024-12-19'
+date: '2026-02-21'
 ---
 The daily scrum: It's not a status meeting, it's a synchronization meeting. The term status meeting conjures images of sitting around a table with each person giving an update to a project manager while everyone else feigns interest (In reality, they're either mentally preparing for their own upcoming update or wondering how much longer the meeting will last.)
 
