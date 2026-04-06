@@ -5,8 +5,8 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import ThemeSwitch from './theme-switch';
 
-const name = 'Welcome folks!';
-export const siteTitle = 'Blog | Florent Hallet';
+const name = 'The Product Owner Toolbox';
+export const siteTitle = 'Product Owner Scrum | Florent Hallet';
 
 export default function Layout({ children, home }) {
   return (
@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="A blog about agility and the role of the product owner"
+          content="A blog about SCRUM and the role of the Product Owner in our modern time."
         />
         <meta
           property="og:image"
@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
               className={utilStyles.borderCircle}
               height={144}
               width={144}
-              alt="A scientist reading a paper in front of a old computer"
+              alt="A scientist reading a sheet of paper in front of a old computer"
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -49,7 +49,7 @@ export default function Layout({ children, home }) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt="A scientist reading a paper in front of a old computer"
+                alt="A scientist reading a sheet of paper in front of a old computer"
               />
             </Link>
             <h2 className={utilStyles.headingMd}>
